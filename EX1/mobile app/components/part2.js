@@ -50,7 +50,7 @@ export default class Part1 extends Component {
                         }}
                     >
                         <View style={{ flex: 1 / 2 }}>
-                            <Text style={{ marginLeft: 10 }}>Latitude</Text>
+                            <Text style={{ marginLeft: 10 }}>Latitude 1</Text>
                             <TextInput
                                 style={{
                                     marginLeft: 10,
@@ -69,7 +69,7 @@ export default class Part1 extends Component {
                             />
                         </View>
                         <View style={{ flex: 1 / 2 }}>
-                            <Text style={{ marginLeft: 10 }}>Latitude</Text>
+                            <Text style={{ marginLeft: 10 }}>Longitude 1</Text>
                             <TextInput
                                 style={{
                                     marginLeft: 10,
@@ -96,7 +96,7 @@ export default class Part1 extends Component {
                         }}
                     >
                         <View style={{ flex: 1 / 2 }}>
-                            <Text style={{ marginLeft: 10 }}>Latitude</Text>
+                            <Text style={{ marginLeft: 10 }}>latitude 2</Text>
                             <TextInput
                                 style={{
                                     marginLeft: 10,
@@ -115,7 +115,7 @@ export default class Part1 extends Component {
                             />
                         </View>
                         <View style={{ flex: 1 / 2 }}>
-                            <Text style={{ marginLeft: 10 }}>Latitude</Text>
+                            <Text style={{ marginLeft: 10 }}>Longitude 2</Text>
                             <TextInput
                                 style={{
                                     marginLeft: 10,
