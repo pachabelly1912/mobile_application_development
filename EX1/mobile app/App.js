@@ -1,14 +1,8 @@
 import React, { Component } from "react";
-import {
-    Platform,
-    StyleSheet,
-    Text,
-    View,
-    Button
-} from "react-native";
+import { Platform, StyleSheet, Text, View, Button } from "react-native";
 import utils from "./utils";
-import Part1 from './components/part1';
-import Part2 from './components/part2'
+import Part1 from "./components/part1";
+import Part2 from "./components/part2";
 export default class App extends Component {
     constructor(props) {
         super(props);

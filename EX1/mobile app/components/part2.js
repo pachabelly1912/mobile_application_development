@@ -24,7 +24,6 @@ export default class Part1 extends Component {
                         flex: 1
                     }}
                 >
-                    backgroundColor: '#E4F1FE',
                     <View
                         style={{
                             height: 30,

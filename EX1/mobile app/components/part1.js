@@ -22,7 +22,6 @@ export default class Part1 extends Component {
                         flex: 1
                     }}
                 >
-                    backgroundColor: '#E4F1FE',
                     <View
                         style={{
                             height: 30,
@@ -89,8 +88,8 @@ export default class Part1 extends Component {
                                 });
                             }}
                         />
-                    </View>{" "}
-                    <View style={{ flex: 1 / 3 }}>
+                    </View>
+                    <View style={{ marginTop: 10, flex: 1 / 3 }}>
                         <Button
                             title="Get Address"
                             onPress={async () => {
