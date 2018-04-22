@@ -1,0 +1,3 @@
+rootProject.name = 'EX2'
+
+include ':app'
