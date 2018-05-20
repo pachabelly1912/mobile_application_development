@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 
 import CurrencyPicker from './CurrencyPicker';
-import History from './History';
 
 class Converter extends Component {
   constructor(props) {
@@ -30,21 +29,6 @@ class Converter extends Component {
       return money * toRate / fromRate;
     }
     return 0;
-  }
-
-  restore = (history) => {
-    const { data } = this.props;
-    const from = data.rates.find((item) => item.currency === history.from);
-    const to = data.rates.find((item) => item.currency === history.to);
-    if (from && to) {
-      this.setState({
-        amount: history.amount,
-        fromRate: from.rate,
-        toRate: to.rate,
-        fromCurrency: history.from,
-        toCurrency: history.to,
-      });
-    }
   }
 
   render() {
@@ -89,7 +73,6 @@ class Converter extends Component {
           <View style={styles.save}>
             <Button
               title='Save'
-              color="#841584"
               disabled={this.state.fromCurrency === this.state.toCurrency}
               onPress={() => {
                 this.props.onConversion(
@@ -102,7 +85,6 @@ class Converter extends Component {
             />
           </View>
         </View>
-        <History data={this.props.history} onSelect={this.restore} />
       </View>
     );
   }

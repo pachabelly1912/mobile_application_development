@@ -80,7 +80,6 @@ class CurrencyPicker extends Component {
         </Modal>
         <Button
           style={styles.currency}
-          color='red'
           title={this.props.selectedCurrency} 
           onPress={() => {
             this.setState({

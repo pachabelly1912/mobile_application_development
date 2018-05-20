@@ -8,8 +8,6 @@ import {
   AsyncStorage
 } from "react-native";
 
-import { getHistory, setHistory } from "./support/Storage";
-
 import Converter from "./components/Converter";
 
 class App extends Component {
@@ -22,38 +20,8 @@ class App extends Component {
         { currency: "BGN", rate: "1.9558" },
         { currency: "VND", rate: "22727.2727273" }
       ]
-    },
-    history: []
-  };
-
-  async getHistory() {
-    const savedItems = await getHistory();
-    this.setState({
-      history: savedItems
-    });
-  }
-
-  componentDidMount() {
-    this.getHistory();
-  }
-
-  updateHistory = (amount, converted, from, to) => {
-    if (from === to) {
-      return;
     }
-    const history = this.state.history;
-    history.unshift({
-      amount,
-      converted,
-      from,
-      to,
-      date: this.state.data.time
-    });
-    this.setState({
-      history: history.slice(0, 30)
-    });
-    setHistory(this.state.history);
-  };
+};
 
   render() {
     const date = new Date();
@@ -67,8 +35,6 @@ class App extends Component {
         </View>
         <Converter
           data={this.state.data}
-          onConversion={this.updateHistory}
-          history={this.state.history}
         />
       </View>
     );
@@ -77,32 +43,32 @@ class App extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   },
   error: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   header: {
-    backgroundColor: "black",
+    backgroundColor: '#4ed34e',
     paddingHorizontal: 10,
     paddingTop: 20,
-    paddingBottom: 5
+    paddingBottom: 5,
   },
   title: {
     fontSize: 20,
-    color: "#fff"
+    color: '#fff',
   },
   subtitle: {
-    color: "#fff",
-    fontSize: 14
+    color: '#fff',
+    fontSize: 14,
   },
   loader: {
-    alignSelf: "center",
-    marginTop: 50
-  }
+    alignSelf: 'center',
+    marginTop: 50,
+  },
 });
 
 export default App;
