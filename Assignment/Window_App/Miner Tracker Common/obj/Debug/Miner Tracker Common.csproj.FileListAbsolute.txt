@@ -1,0 +1,18 @@
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\bin\Debug\service.config
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\bin\Debug\packages.config
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\bin\Debug\MinerTrackerCommonLib.dll
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\bin\Debug\MinerTrackerCommonLib.pdb
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\bin\Debug\Microsoft.Win32.TaskScheduler.dll
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\bin\Debug\OpenHardwareMonitorLib.dll
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\bin\Debug\Microsoft.Win32.TaskScheduler.xml
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\bin\Debug\de\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\bin\Debug\es\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\bin\Debug\fr\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\bin\Debug\it\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\bin\Debug\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\obj\Debug\Miner Tracker Common.csproj.CoreCompileInputs.cache
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\obj\Debug\MinerTrackerCommonLib.dll
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\obj\Debug\MinerTrackerCommonLib.pdb
+C:\Users\Thanh Hoang Le Hai\Source\Repos\Miner Tracker\Miner Tracker\Miner Tracker Common\obj\Debug\Miner Tracker Common.csprojResolveAssemblyReference.cache

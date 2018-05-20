@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Miner Tracker Desktop.exe" version="1.0.0.0" publicKeyToken="114fb43c565b868f" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="logo.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Miner Tracker Desktop" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Miner Tracker Desktop.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Miner Tracker Desktop.exe" size="566800">
+      <assemblyIdentity name="Miner Tracker Desktop" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Esd2vFj+jafn71VMe7QhcO4tqQJT88G1M4uaqcPyHQk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="logo.ico" size="270398">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>O9DGCkuwTH9FsxnepF7TgrIXDkq26lqWkWdf7SuvCpI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Miner Tracker Desktop.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=GHOSTBB-PC\Thanh Hoang Le Hai" issuerKeyHash="639c48311543129866f6ca2bf16889ef0b3507ba" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Up6pcwCQ/uVfu+w3JlFl+v8xWH2uBMQQTyuqNzUL5Gw=</DigestValue></Reference></SignedInfo><SignatureValue>W06IvaPHrTPz6TPe0j9/RSsmlWZCPUafIRZjyB202dBZckNFjwx7qzk09p5f8lwq7wN91ghxoHdLT0pH2gzRrsZ22yxOingO8pPLKCC2+v3oRdLMdFjVO/HHuVT3eekoNcfIgK8babii8wQ5XqIfjaLz1yfCB5tIyrDayhNtXOY=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>nmOFa98kGFegcPpM7w3fJgpoU/IxlX4oU8g/RRfqJumG8iagHVTvZ5ejutygdc0Dg4KTzIitmA9sUw4SPt2dDKwe6qBDrWtxWmCa+Y8AQYNeXvcolxSeb32t6004gRqKq1jjJq+wqRIK+NvJ0fq93/JesE15EF32O8olki8m+lk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="6ce40b3537aa2b4f10c404ae7d5831fffa65512637ecbb5fe5fe900073a99e52" Description="" Url=""><as:assemblyIdentity name="Miner Tracker Desktop.exe" version="1.0.0.0" publicKeyToken="114fb43c565b868f" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=GHOSTBB-PC\Thanh Hoang Le Hai</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>DTPOcChptHJ4WcEOjK1TaL6IMbdRW89n3v3iT6zua6Y=</DigestValue></Reference></SignedInfo><SignatureValue>alwcdoYJQjnbbRt2nvYDAOv4UYP0UmyUG4WmEtl/wV0iNxIFLI22LiuThdG1MEW2hCSaH2vkm39XGcGaenTfhc838FTVD1t/fkoxUcE7XPKE40nFbaAS3iVWEUjXgHW/TN/pwSRIepiVLJ2iuB3DMkhtbklTA0cYGGBxQGXNWLw=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>nmOFa98kGFegcPpM7w3fJgpoU/IxlX4oU8g/RRfqJumG8iagHVTvZ5ejutygdc0Dg4KTzIitmA9sUw4SPt2dDKwe6qBDrWtxWmCa+Y8AQYNeXvcolxSeb32t6004gRqKq1jjJq+wqRIK+NvJ0fq93/JesE15EF32O8olki8m+lk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICDTCCAXagAwIBAgIQFlTbt1B6ybRCZV04VaByjDANBgkqhkiG9w0BAQsFADBFMUMwQQYDVQQDHjoARwBIAE8AUwBUAEIAQgAtAFAAQwBcAFQAaABhAG4AaAAgAEgAbwBhAG4AZwAgAEwAZQAgAEgAYQBpMB4XDTE4MDIwMzEzMTgyM1oXDTE5MDIwMzE5MTgyM1owRTFDMEEGA1UEAx46AEcASABPAFMAVABCAEIALQBQAEMAXABUAGgAYQBuAGgAIABIAG8AYQBuAGcAIABMAGUAIABIAGEAaTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAnmOFa98kGFegcPpM7w3fJgpoU/IxlX4oU8g/RRfqJumG8iagHVTvZ5ejutygdc0Dg4KTzIitmA9sUw4SPt2dDKwe6qBDrWtxWmCa+Y8AQYNeXvcolxSeb32t6004gRqKq1jjJq+wqRIK+NvJ0fq93/JesE15EF32O8olki8m+lkCAwEAATANBgkqhkiG9w0BAQsFAAOBgQBoO75rcwX/cFBLhiS2rtFwgkM7jtzwTMMABJF9sHtGVeL0uZ0h7ltVFBIOu6BfoOGhWLkyWDgIbLWmS5qFOWWoolURgtyqYB4g0E/OUDAYf2t/aIMrQ7gfwzkTzyEv7Tg2F5TQ+LoArQ01n6frPBqjivopKZ6msQsBnmwBMXY5XQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
