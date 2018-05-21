@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import * as historyActions from '../../actions/historyActions';
 import HeaderBar from '../../commons/headerBar';
 import HistoryGpuContent from './content';
+import moment from 'moment'
 
 export class HistoryGpuContainer extends Component {
 
@@ -73,7 +74,7 @@ export class HistoryGpuContainer extends Component {
 
     render() {
         const { params } = this.props.navigation.state;
-
+        const data = params.isDanger ? this.props.history.filter(item => moment(item.Time).format('x') > moment(item.Time).format('x')  ) : this.props.history
         return (
             <HistoryGpuContent
                 isLoading={this.state.isLoading}
@@ -81,6 +82,7 @@ export class HistoryGpuContainer extends Component {
                 computerName={params.computerName}
                 gpuName={params.gpuName + '-' + (params.gpuIndex + 1)}
                 onEndReached={this.onEndReached}
+                gpuSetting = {params.gpuSetting}
             />
         )
     }

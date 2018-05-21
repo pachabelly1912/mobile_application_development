@@ -12,6 +12,7 @@ import HeaderBar from '../../commons/headerBar';
 import HomeContent from './content';
 import testData from './testData';
 import ENUMS from '../../constants/enums'
+import * as gpuSettingActions from '../../actions/gpuSettingActions';
 import * as computerListActions from '../../actions/computerListActions';
 import * as performanceActions from '../../actions/performanceActions';
 import * as gpuStatusActions from '../../actions/gpuStatusActions';
@@ -43,6 +44,7 @@ export class HomeContainer extends Component {
     componentWillMount() {
 
         this.props.fetchComputerList()
+        this.props.fetchGpuList()
         this.props.fetchGpuStatus()
         this.props.navigation.setParams({ onRefresh: this.onRefresh })
 
@@ -144,12 +146,33 @@ export class HomeContainer extends Component {
         })
     }
 
+    showDanger =  (computerIndex, gpuIndex) => {
+        const computerName = this.props.computerList[computerIndex].Name
+        const gpuName = this.props.computerList[computerIndex].GPUs[gpuIndex].Name
+        const computerId = this.props.computerList[computerIndex].ID
+        const gpuId = this.props.computerList[computerIndex].GPUs[gpuIndex].ID
+        const gpuSetting = this.props.gpuSetting.find(item => item.Name === gpuName)
+        this.props.navigation.navigate(ENUMS.SCREEN.HISTORY_GPU, {
+            gpuSetting,
+            computerName,
+            gpuName,
+            computerId,
+            gpuId,
+            gpuIndex,
+            isDanger: true
+        })
+    }
+
+
     showHistory = (computerIndex, gpuIndex) => {
         const computerName = this.props.computerList[computerIndex].Name
         const gpuName = this.props.computerList[computerIndex].GPUs[gpuIndex].Name
         const computerId = this.props.computerList[computerIndex].ID
         const gpuId = this.props.computerList[computerIndex].GPUs[gpuIndex].ID
+        const seenDate = this.props.computerList[computerIndex].GPUs[gpuIndex].SeenDate
+        const gpuSetting = this.props.gpuSetting.find(item => item.Name === gpuName)
         this.props.navigation.navigate(ENUMS.SCREEN.HISTORY_GPU, {
+            gpuSetting,
             computerName,
             gpuName,
             computerId,
@@ -205,7 +228,7 @@ export class HomeContainer extends Component {
 
     }
     componentWillReceiveProps(nextProps) {
-        if (nextProps.computerList.length === 0 || nextProps.gpuStatus.length === 0)
+        if (nextProps.computerList.length === 0 || nextProps.gpuStatus.length === 0 || nextProps.gpuSetting.length === 0)
             this.setState({
                 isLoading: true
             })
@@ -242,7 +265,7 @@ export class HomeContainer extends Component {
     }
 
     render() {
-        // console.log(this.props)
+        console.log(this.props)
         return (
             <HomeContent
                 isLoading={this.state.isLoading}
@@ -257,6 +280,7 @@ export class HomeContainer extends Component {
                 deleteComputer={this.deleteComputer}
                 deleteGpu={this.deleteGpu}
                 setSeen={this.setSeen}
+                showDanger={this.showDanger}
             />
         )
     }
@@ -264,6 +288,7 @@ export class HomeContainer extends Component {
 
 function mapStateToProps(state) {
     return {
+        gpuSetting: state.gpuSettingReducer,
         gpuStatus: state.gpuStatusReducer,
         performanceList: state.performanceReducer,
         computerList: state.computerListReducer
@@ -271,7 +296,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators(Object.assign({}, computerListActions, performanceActions, gpuStatusActions), dispatch);
+    return bindActionCreators(Object.assign({}, computerListActions, performanceActions, gpuStatusActions, gpuSettingActions), dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer)

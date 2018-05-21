@@ -41,10 +41,11 @@ export default class HistoryGpuContent extends Component {
     }
 
     render() {
+        const gpuSetting = this.props.gpuSetting
         const mainContainer = this.props.isLoading ?
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <ActivityIndicator size="large" color="#0000ff" />
-        </View> : <FlatList
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <ActivityIndicator size="large" color="#0000ff" />
+            </View> : <FlatList
                 style={{ flex: 1, marginLeft: 10, marginRight: 10 }}
                 data={this.props.history}
                 renderItem={({ item, index }) => this.renderItem(item, index)}
@@ -70,6 +71,30 @@ export default class HistoryGpuContent extends Component {
                     color: '#50E3C2',
                     // fontFamily: 'OCRAStd'
                 }}>{this.props.gpuName}</Text>
+                <View style={{ height: 60, marginVertical: 3  }}>
+                    <View style={{ backgroundColor: 'grey', height: 55, borderRadius: 4, marginVertical: 5 }}>
+
+                        <View style={{ flex: 1, flexDirection: 'row'}}>
+                            <View style={{ flex: 1 / 4, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                                <Image style={{ height: 18, width: 18, resizeMode: 'stretch' }} source={require('../../assets/images/temp.png')} />
+                                <Text style={{ color: 'white', fontSize: 15, marginLeft: 5 }}>{gpuSetting.MinTemperature + '-' + gpuSetting.MaxTemperature}</Text>
+                            </View>
+                            <View style={{ flex: 1 / 4, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                                <Image style={{ height: 18, width: 18, resizeMode: 'stretch' }} source={require('../../assets/images/fan.png')} />
+                                <Text style={{ color: 'white', fontSize: 15, marginLeft: 5 }}>{gpuSetting.MinFanSpeed + '-' + gpuSetting.MaxFanSpeed}</Text>
+                            </View>
+                            <View style={{ flex: 1 / 4, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                                <Image style={{ height: 18, width: 18, resizeMode: 'stretch' }} source={require('../../assets/images/power.png')} />
+                                <Text style={{ color: 'white', fontSize: 15, marginLeft: 5 }}>{gpuSetting.MinPowerUsage + '-' + gpuSetting.MaxPowerUsage}</Text>
+                            </View>
+                            <View style={{ flex: 1 / 4, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                                <Image style={{ height: 18, width: 18, resizeMode: 'stretch' }} source={require('../../assets/images/ram.png')} />
+                                <Text style={{ color: 'white', fontSize: 15, marginLeft: 5 }}>{gpuSetting.MinMemoryUsage + '-' + gpuSetting.MaxMemoryUsage}</Text>
+                            </View>
+                        </View>
+
+                    </View>
+                </View>
                 {mainContainer}
             </View>
         )

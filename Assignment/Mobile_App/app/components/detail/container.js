@@ -174,6 +174,7 @@ export class DetailContainer extends Component {
     }
 
     render() {
+        console.log(this.props)
         const { params } = this.props.navigation.state;
         return <DetailContent
             computerName={params.computerName}

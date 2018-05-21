@@ -146,11 +146,11 @@ export default class SettingContent extends Component {
                 <Text style={[styles.topicTxt, { marginTop: 10 }]}>{this.props.selectedGpu.Name}</Text>
                 <View style={{ flex: 7 / 8 }}>
                     <View style={{ flex: 1 / 4 }} >
-                        <View style={{ flex: 1 / 5, backgroundColor: '#051429', flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <View style={{ flex: 1.5 / 5, backgroundColor: '#051429', flexDirection: 'row', justifyContent: 'space-between' }}>
                             <Text style={[styles.topicTxt, { color: '#50E3C2', marginLeft: 10, fontSize: 15 }]}>Temp's bound</Text>
-                            <Switch disabled={this.state.showEditButton} value={this.state.enableTemp} onValueChange={() => { this.setState({ enableTemp: !this.state.enableTemp }) }} />
+                            <Switch style ={{alignSelf: 'center'}} disabled={this.state.showEditButton} value={this.state.enableTemp} onValueChange={() => { this.setState({ enableTemp: !this.state.enableTemp }) }} />
                         </View>
-                        <View style={{ flex: 4 / 5, flexDirection: 'row' }}>
+                        <View style={{ flex: 3.5 / 5, flexDirection: 'row' }}>
                             <View style={{ flex: 1 / 5, justifyContent: 'center', alignItems: 'center' }}>
                                 <Image style={{ resizeMode: 'stretch' }} source={require('../../assets/images/temp.png')} />
                                 <Text style={[styles.topicTxt, { color: '#50E3C2', marginTop: 5, fontSize: 10 }]}>{this.state.MinTemperature + '-' + this.state.MaxTemperature + '◦C'}</Text>
@@ -183,11 +183,11 @@ export default class SettingContent extends Component {
                         </View>
                     </View>
                     <View style={{ flex: 1 / 4 }} >
-                        <View style={{ flex: 1 / 5, backgroundColor: '#051429', flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <View style={{ flex: 1.5 / 5, backgroundColor: '#051429', flexDirection: 'row', justifyContent: 'space-between' }}>
                             <Text style={[styles.topicTxt, { color: '#50E3C2', marginLeft: 10, fontSize: 15 }]}>Fan's bound</Text>
-                            <Switch disabled={this.state.showEditButton} value={this.state.enableFan} onValueChange={() => { this.setState({ enableFan: !this.state.enableFan }) }} />
+                            <Switch style ={{alignSelf: 'center'}} disabled={this.state.showEditButton} value={this.state.enableTemp} onValueChange={() => { this.setState({ enableTemp: !this.state.enableTemp }) }} />
                         </View>
-                        <View style={{ flex: 4 / 5, flexDirection: 'row' }}>
+                        <View style={{ flex: 3.5 / 5, flexDirection: 'row' }}>
                             <View style={{ flex: 1 / 5, justifyContent: 'center', alignItems: 'center' }}>
                                 <Image style={{ resizeMode: 'stretch' }} source={require('../../assets/images/fan.png')} />
                                 <Text style={[styles.topicTxt, { color: '#50E3C2', marginTop: 5, fontSize: 10 }]}>{this.state.MinFanSpeed + '-' + this.state.MaxFanSpeed + '%'}</Text>
@@ -222,11 +222,11 @@ export default class SettingContent extends Component {
                         </View>
                     </View>
                     <View style={{ flex: 1 / 4 }} >
-                        <View style={{ flex: 1 / 5, backgroundColor: '#051429', flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <View style={{ flex: 1.5 / 5, backgroundColor: '#051429', flexDirection: 'row', justifyContent: 'space-between' }}>
                             <Text style={[styles.topicTxt, { color: '#50E3C2', marginLeft: 10, fontSize: 15 }]}>Power's bound</Text>
-                            <Switch disabled={this.state.showEditButton} value={this.state.enablePower} onValueChange={() => { this.setState({ enablePower: !this.state.enablePower }) }} />
+                            <Switch style ={{alignSelf: 'center'}} disabled={this.state.showEditButton} value={this.state.enableTemp} onValueChange={() => { this.setState({ enableTemp: !this.state.enableTemp }) }} />
                         </View>
-                        <View style={{ flex: 4 / 5, flexDirection: 'row' }}>
+                        <View style={{ flex: 3.5 / 5, flexDirection: 'row' }}>
                             <View style={{ flex: 1 / 5, justifyContent: 'center', alignItems: 'center' }}>
                                 <Image style={{ resizeMode: 'stretch' }} source={require('../../assets/images/power.png')} />
                                 <Text style={[styles.topicTxt, { color: '#50E3C2', marginTop: 5, fontSize: 10 }]}>{this.state.MinPowerUsage + '-' + this.state.MaxPowerUsage + '%'}</Text>
@@ -259,11 +259,11 @@ export default class SettingContent extends Component {
                         </View>
                     </View>
                     <View style={{ flex: 1 / 4 }} >
-                        <View style={{ flex: 1 / 5, backgroundColor: '#051429', flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <View style={{ flex: 1.5 / 5, backgroundColor: '#051429', flexDirection: 'row', justifyContent: 'space-between' }}>
                             <Text style={[styles.topicTxt, { color: '#50E3C2', marginLeft: 10, fontSize: 15 }]}>Memory's bound</Text>
-                            <Switch disabled={this.state.showEditButton} value={this.state.enableRam} onValueChange={() => { this.setState({ enableRam: !this.state.enableRam }) }} />
+                            <Switch style ={{alignSelf: 'center'}} disabled={this.state.showEditButton} value={this.state.enableTemp} onValueChange={() => { this.setState({ enableTemp: !this.state.enableTemp }) }} />
                         </View>
-                        <View style={{ flex: 4 / 5, flexDirection: 'row' }}>
+                        <View style={{ flex: 3.5 / 5, flexDirection: 'row' }}>
                             <View style={{ flex: 1 / 5, justifyContent: 'center', alignItems: 'center' }}>
                                 <Image style={{ resizeMode: 'stretch' }} source={require('../../assets/images/ram.png')} />
                                 <Text style={[styles.topicTxt, { color: '#50E3C2', marginTop: 5, fontSize: 10 }]}>{this.state.MinMemoryUsage + '-' + this.state.MaxMemoryUsage + '%'}</Text>

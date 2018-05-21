@@ -39,8 +39,11 @@ export default class HomeContent extends Component {
                             <TouchableOpacity style={styles.statusButtonContainer}>
                                 <Image style={styles.statusButton} source={require('../../assets/images/lost-signal.png')} />
                             </TouchableOpacity> :
-                            <TouchableOpacity style={styles.statusButtonContainer} onPress={()=>{this.props.setSeen(gpu.ID)}}>
+                            <TouchableOpacity style={styles.statusButtonContainer} onPress={()=>{this.props.showDanger(index, gpuIndex)}}>
                                 <Image style={styles.statusButton} source={require('../../assets/images/danger-status-button.png')} />
+                                <View style={{justifyContent: 'center', alignItems: 'center' ,position: 'absolute', top: -5, right: -5, width: 15, height: 15, borderRadius: 7.5,backgroundColor: 'red'}}>
+                                    <Text style={{fontSize: 8, color: 'white'}}>{health}</Text>
+                                </View>
                             </TouchableOpacity>
 
 
@@ -54,10 +57,13 @@ export default class HomeContent extends Component {
                             <View style={styles.gpuContainer}>
                                 {deleleButton}
                                 {statusButton}
-                                <TouchableOpacity style={{ flex: 4 / 5 }} onLongPress={() => { this.props.onPrepareDelete(index, gpuIndex) }}>
+                                <TouchableOpacity style={{ flex: 3 / 5 }} onLongPress={() => { this.props.onPrepareDelete(index, gpuIndex) }}>
                                     <Text style={styles.gpuNameText}>{gpu.Name}</Text>
                                 </TouchableOpacity>
-                                <View style={{ flex: 1 / 5, justifyContent: 'space-between', flexDirection: 'row', paddingRight: 20 }}>
+                                <View style={{ flex: 2 / 5, justifyContent: 'space-between', flexDirection: 'row', paddingRight: 20 }}>
+                                    <TouchableOpacity onPress={()=>{this.props.setSeen(gpu.ID)}} style={{backgroundColor: 'white', marginHorizontal: 5 , width: 50, borderRadius: 4, justifyContent: 'center', alignItems: 'center'}}>
+                                        <Text style ={{color: 'red', fontWeight: 'bold', fontSize: 12}}>Resolve</Text>
+                                    </TouchableOpacity>
                                     <TouchableOpacity disabled={!isOk} onPress={() => { this.props.showDetail(index, gpuIndex) }}><Image style={styles.detailButton} source={require('../../assets/images/chart.png')} /></TouchableOpacity>
                                     <TouchableOpacity onPress={() => { this.props.showHistory(index, gpuIndex) }}><Image style={styles.detailButton} source={require('../../assets/images/history.png')} /></TouchableOpacity>
                                 </View>
@@ -69,8 +75,6 @@ export default class HomeContent extends Component {
             <View style={{ backgroundColor: 'black', height: 5 }} />
         </View>
     }
-
-    onLongPress
 
     render() {
         const mainContainer = this.props.isLoading ?

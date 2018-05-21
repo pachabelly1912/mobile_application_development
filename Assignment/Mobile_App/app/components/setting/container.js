@@ -74,7 +74,6 @@ export class SettingContainer extends Component {
 
     componentWillMount() {
         BackHandler.addEventListener('hardwareBackPress', this.handleBackButtonClick);
-        this.props.fetchGpuList()
     }
 
     selectGpu = (index) => {
@@ -100,8 +99,4 @@ function mapStateToProps(state) {
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators(Object.assign({}, gpuSettingActions), dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(SettingContainer)
+export default connect(mapStateToProps)(SettingContainer)
