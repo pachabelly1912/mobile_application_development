@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../socket/socket.js"],"names":["Socket","io","undefined","module","exports"],"mappings":";;AAAA,IAAMA,SAAS;AACXC,QAAIC;AADO,CAAf;;AAIAC,OAAOC,OAAP,GAAiBJ,MAAjB","file":"socket.js","sourcesContent":["const Socket = {\n    io: undefined\n};\n\nmodule.exports = Socket;"]}
