@@ -1,0 +1,13 @@
+EX3: Nhóm làm bài theo chủ đề 1: Ứng dụng tìm việc đơn giản 
+- App authentic job sử dụng ngôn ngữ lập trình Swift dành cho hệ điều hành iOS 
+- Yêu cầu hệ thống: 
+  + OS: MacOS 
+  + Tool: Xcode 9 
+  + Swift 4 
+- Hướng dẫn: 
+  + Ở thư mục Authentic job, run command: pop install 
+   + Sau đó mở file AuthenticJob.xcworkspace 
+   + Click button Full time để show các job Full time 
+   + Click button Part time để show các job Part time 
+   + Click button Saved để show các job đã lưu 
+   + Select job và màn hình thông tin của job sẽ hiện ra, button save để lưu lại Job.
